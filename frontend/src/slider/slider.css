@@ -1,0 +1,42 @@
+.header {
+  margin: 40px;
+  cursor: pointer;
+  position: absolute;
+  transform: scale(2);
+  z-index: 1000;
+}
+.slider {
+  width: 100%;
+  height: 100%;
+}
+.slider__photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px;
+}
+.account_header__text {
+  font-size: xx-large;
+}
+.gallery_text {
+  font-size: larger;
+}
+.form__buttons {
+  display: flex;
+  gap: 30px;
+}
+body {
+  background: rgba(133, 22, 143, 0.288);
+}
