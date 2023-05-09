@@ -13,19 +13,19 @@ function Slider({ photos }: { photos: Photos }): JSX.Element {
   useEffect(() => {
     let interval = setInterval(() => {
       window.dispatchEvent(event);
-    }, 5000);
+    }, 15000);
 
     window.onmousemove = () => {
       clearInterval(interval);
       interval = setInterval(() => {
         window.dispatchEvent(event);
-      }, 5000);
+      }, 15000);
     };
     window.onkeydown = () => {
       clearInterval(interval);
       interval = setInterval(() => {
         window.dispatchEvent(event);
-      }, 5000);
+      }, 15000);
     };
   }, []);
 
