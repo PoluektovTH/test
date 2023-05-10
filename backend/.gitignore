@@ -116,3 +116,6 @@ dist
 
 # Sessions
 sessions/
+;
+# DB
+db/
