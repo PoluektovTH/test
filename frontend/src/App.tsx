@@ -17,7 +17,7 @@ function App(): JSX.Element {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    fetch('/pics/get')
+    fetch('https://backend-test-24dr.onrender.com/pics/get')
       .then((res) => res.json())
       .then((data: Photos) => {
         dispatch({ type: 'pics/get', payload: data });
@@ -44,7 +44,7 @@ function App(): JSX.Element {
     }
   };
   const handleDelete = (): void => {
-    fetch('pics/delAll')
+    fetch('/pics/delAll')
       .then((res) => {
         res.json();
       })
