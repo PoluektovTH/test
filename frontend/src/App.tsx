@@ -28,7 +28,7 @@ function App(): JSX.Element {
   const handleUpload = async (name: string, url: string): Promise<void> => {
     const { height, width } = await fetchImageSize(url);
     if (height === 1080 && width === 1920) {
-      fetch('/pics/upload', {
+      fetch('https://backend-test-24dr.onrender.com/pics/upload', {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -44,7 +44,7 @@ function App(): JSX.Element {
     }
   };
   const handleDelete = (): void => {
-    fetch('/pics/delAll')
+    fetch('https://backend-test-24dr.onrender.com/pics/delAll')
       .then((res) => {
         res.json();
       })
