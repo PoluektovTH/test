@@ -27,8 +27,10 @@ function Account({
   const [dimensions, setDimensions] = useState<Dimensions>();
 
   async function fetchImageSize(): Promise<void> {
-    const dimensions = await getImageSize(url);
-    setDimensions(dimensions);
+    if (url) {
+      const dimensions = await getImageSize(url);
+      setDimensions(dimensions);
+    }
   }
 
   const nav = useNavigate();
